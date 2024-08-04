@@ -7,6 +7,16 @@ module Enumerable
       yield(elem, ind)
     end
   end
+
+  def my_select
+    ret = []
+    self.each do |elem|
+      if yield(elem)
+        ret.push(elem)
+      end
+    end
+    ret
+  end
 end
 
 # You will first have to define my_each
