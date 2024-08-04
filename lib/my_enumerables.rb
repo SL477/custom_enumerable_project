@@ -17,6 +17,15 @@ module Enumerable
     end
     ret
   end
+
+  def my_all?
+    self.each do |elem|
+      if !yield(elem)
+        return false
+      end
+    end
+    return true
+  end
 end
 
 # You will first have to define my_each
