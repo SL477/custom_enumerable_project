@@ -26,6 +26,15 @@ module Enumerable
     end
     return true
   end
+
+  def my_any?
+    self.each do |elem|
+      if yield(elem)
+        return true
+      end
+    end
+    return false
+  end
 end
 
 # You will first have to define my_each
