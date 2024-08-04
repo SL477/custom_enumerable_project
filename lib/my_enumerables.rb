@@ -54,6 +54,14 @@ module Enumerable
     end
     return cnt
   end
+
+  def my_map(&my_block)
+    ret = []
+    self.each do |elem|
+      ret.push(yield(elem))
+    end
+    ret
+  end
 end
 
 # You will first have to define my_each
